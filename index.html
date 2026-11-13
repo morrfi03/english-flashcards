@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Изучение английского — Карточки</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>📚 English Flashcards</h1>
+      <nav>
+        <a href="index.html" class="active">Изучение</a>
+        <a href="rules.html">Правила</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="mode-selector">
+        <button class="mode-btn active" data-mode="verbs">Неправильные глаголы</button>
+        <button class="mode-btn" data-mode="words">Слова / Фразы</button>
+        <button class="mode-btn" data-mode="custom">Мои слова</button>
+      </div>
+      <div class="stats">
+        <span id="progress">0 / 0</span>
+        <button id="shuffle-btn">Перемешать</button>
+      </div>
+    </section>
+
+    <section class="card-container">
+      <div class="flashcard" id="flashcard">
+        <div class="card-front">
+          <div class="card-content" id="front-content">Загрузка...</div>
+          <div class="hint">Нажмите, чтобы перевернуть</div>
+        </div>
+        <div class="card-back">
+          <div class="card-content" id="back-content"></div>
+          <div class="hint">Нажмите, чтобы вернуть</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="prev-btn">← Предыдущая</button>
+      <button id="know-btn">Знаю ✓</button>
+      <button id="dont-know-btn">Не знаю ✗</button>
+      <button id="next-btn">Следующая →</button>
+    </section>
+
+    <section class="add-form" id="add-form" style="display:none;">
+      <h3>Добавить своё слово / фразу</h3>
+      <input type="text" id="en-input" placeholder="English word or phrase">
+      <input type="text" id="ru-input" placeholder="Перевод на русский">
+      <button id="add-btn">Добавить</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
